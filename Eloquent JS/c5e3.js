@@ -6,6 +6,10 @@ function every(arr, testf) {
     return true
 }
 
+function every2(arr, testf) {
+    return !arr.some(elem => !testf(elem))
+}
+
 function testf(num) {
     if(num % 2 == 0)
         return true
@@ -15,4 +19,8 @@ function testf(num) {
 console.log(every([2,4,6,8],testf))
 // -> true
 console.log(every([2,4,6,7],testf))
+// -> false
+console.log(every2([2,4,6,8],testf))
+// -> true
+console.log(every2([2,4,6,7],testf))
 // -> false
