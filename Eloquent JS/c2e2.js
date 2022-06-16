@@ -1,20 +1,15 @@
-const fb = "FizzBuzz";
-const f  = "Fizz";
-const b  = "Buzz";
+const fb = 'FizzBuzz'
+const f = 'Fizz'
+const b = 'Buzz'
 
-for (let i=1; i<101; i++){
-    if (i % 5 == 0){
-        if (i % 3 == 0){
-            console.log(fb)
-        }
-        else{
-        console.log(b)
-        }
-    }
-    else if (i % 3 == 0){
-        console.log(f)
-    }
-    else{
+for (let i = 0; i <= 100; i++){
+    if (i % 5 === 0 && i % 3 === 0) {
+        console.log(`${i} - ${fb}`)
+    } else if (i % 5 === 0){
+        console.log(`${i} - ${b}`)
+    } else if (i % 3 === 0){
+        console.log(`${i} - ${f}`)
+    } else {
         console.log(i)
     }
 }
