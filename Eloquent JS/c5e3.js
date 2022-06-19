@@ -7,6 +7,7 @@ function every(arr, testf) {
 }
 
 function every2(arr, testf) {
+    // de morgans theorem
     return !arr.some(elem => !testf(elem))
 }
 
