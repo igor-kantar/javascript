@@ -20,9 +20,9 @@ v2 = new Vec(2,3)
 sum = v1.plus(v2)
 dif = v1.minus(v2)
 
-console.log(v1.getLength())
+console.log(`Len: ${v1.getLength()}`)
 // -> 1.4142135623730951
-console.log("Sum: "+ sum.x +","+sum.y)
+console.log(`Sum: ${sum.x},${sum.y}`);
 // -> Sum: 3,4
-console.log("Sum: "+ dif.x +","+dif.y)
+console.log(`Dif: ${dif.x},${dif.y}`);
 // -> Sum: -1,-2
