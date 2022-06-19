@@ -1,17 +1,31 @@
-const width  = 4;
-const height = 3;
+// Write a program that creates a string that represents an 8×8 grid, using newline
+// characters to separate lines. At each position of the grid there is either a space
+// or a "#" character. The characters should form a chessboard.
+// Passing this string to console.log should show something like this:
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
+//  # # # #
+// # # # #
+// When you have a program that generates this pattern, define a binding size
+// = 8 and change the program so that it works for any size, outputting a grid
+// of the given width and height.
+
+const width  = 8;
+const height = 8;
 const size   = width * height;
 let row      = "";
 
 for (let i=0 ; i < size; i++){
     row = "";
     for (let j=0; j < width; j++, i++){
-        if (i % 2 == 0){
+        if (i % 2 == 0)
             row += " ";
-        }
-        else{
+        else
             row += "#";
-        }
     }
     console.log(row);
 }
