@@ -11,27 +11,27 @@
 
 function deepEqual(a, b) {
     if (a === b) 
-        return true;
+        return true
     if (a == null || typeof a != "object" ||
         b == null || typeof b != "object") 
-        return false;
+        return false
     let keysA = Object.keys(a)
-    let keysB = Object.keys(b);
+    let keysB = Object.keys(b)
     if (keysA.length != keysB.length)
-        return false;
+        return false
     for (let key of keysA) {
         if (!key in keysB || !deepEqual(a[key], b[key]))
-            return false;
+            return false
     }
-    return true;
+    return true
 }
 
 
-const obj = {one:"one", two:"two"};
+const obj = {one:"one", two:"two"}
 
-console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, obj))
 // → true
-console.log(deepEqual(obj, {one: 1, one: 2}));
+console.log(deepEqual(obj, {one: 1, one: 2}))
 // → false
-console.log(deepEqual(obj, {one:"one", two:"two"}));
+console.log(deepEqual(obj, {one:"one", two:"two"}))
 // → true
